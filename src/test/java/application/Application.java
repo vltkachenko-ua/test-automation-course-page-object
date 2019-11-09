@@ -64,4 +64,8 @@ public class Application {
         addNewProductPage.addProduct(product);
     }
 
+    public boolean isNewProductAdded(Product product) {
+        return addNewProductPage.findProduct(product);
+    }
+
 }

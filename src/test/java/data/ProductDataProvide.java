@@ -8,7 +8,7 @@ public class ProductDataProvide {
         return new Object[][]{
                 {Product.newEntity()
                         .withName("TVV" + System.currentTimeMillis())
-                        .withCode("TVV Code")
+                        .withCode("TVV Code"+ System.currentTimeMillis())
                         .withShortDescription("Description")
                         .withDescription("Short Description")
                         .withTechnicalData("Technical Data")

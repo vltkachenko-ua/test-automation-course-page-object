@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class AddNewProductPage extends Page {
 
@@ -50,6 +51,11 @@ public class AddNewProductPage extends Page {
         purchasePriceElement.sendKeys(product.getPurchasePrice());
         pricesUSDElement.sendKeys(product.getPriceUSD());
         saveButtonElement.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.name("catalog_form")));
+    }
+
+    public boolean findProduct(Product product) {
+        return driver.findElement(By.xpath(String.format("//td[contains(text(), '%s')]", product.getName()))).isDisplayed();
     }
 
 }

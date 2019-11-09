@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'gl'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    testImplementation("io.github.bonigarcia:webdrivermanager:3.6.2")
+    testCompile group: 'com.tngtech.java', name: 'junit-dataprovider', version: '1.12.0'
+}
